@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F4F9;
+    width: 100%;
+    height: 100%;
+}
+.mat-card{
+    height: 600px;
+    width: 70%;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.imgg{
+    padding-right: 33px;
+    width: 65%;
+    height: 60%;
+}
+.text{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+.hint{
+    margin-top: -13px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.child1{
+    width: 60%;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.child2{
+    width: 40%;
+    justify-content: center!important;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.googletext h1{
+    display: inline;
+    font-size: 40px;
+}
+.googletext{
+    margin: 20px 0px 0px 30px;
+}
+.form{
+    width: 78%;
+}
+
+.footer{
+    width: 70%;
+    border-radius: 28px;
+    background-color: #F0F4F9;
+}

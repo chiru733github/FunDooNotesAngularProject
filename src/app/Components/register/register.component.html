@@ -1,0 +1,96 @@
+<div class="container text">
+    <mat-card class="mat-card">
+      <div>
+        <mat-card-header>
+          <mat-card-title class="googletext">
+            <h1 style="color: rgb(66,133,244)">G</h1>
+            <h1 style="color: rgb(234,67,53);">o</h1>
+            <h1 style="color: rgb(251,188,5);">o</h1>
+            <h1 style="color: rgb(66,133,244)">g</h1>
+            <h1 style="color: rgb(52,168,83)">l</h1>
+            <h1 style="color: rgb(234,67,53);">e</h1>
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <div class="main">
+        <div class="child1">
+          <mat-card-content>
+            <h1 style="font-size: 36px;">Create your Google Account</h1>
+            <h3 style="font-size: 16px;">to continue to Gmail</h3>
+            <div class="first">
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name">
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="outline" style="padding-left: 20px;">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="Last Name" >
+                </mat-form-field>
+              </div>
+            </div>
+            <div>
+              <mat-form-field appearance="outline" class="form">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" >
+                <mat-icon matSuffix style="padding-right: 10px;">&#64;gmail.com</mat-icon>
+                <mat-hint style="font-size: 14px;">You can use letters, numbers & periods</mat-hint>
+              </mat-form-field>
+            </div>
+            <div class="first">
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field appearance="outline" style="padding-left: 20px;">
+                  <mat-label>Confirm</mat-label>
+                  <input matInput placeholder="Confirm" [type]="hide ? 'password' : 'text'">
+                </mat-form-field>
+              </div>
+            </div>
+            <p class="hint">Use 8 or more characters with a mix of letters, numbers & symbols</p>
+            <mat-checkbox (change)="hide=!hide">Show Password</mat-checkbox>
+            <div class="buttons">
+              <div>
+                <button mat-button color="primary">Sign in instead</button>
+              </div>
+              <div style="padding-right: 22%;">
+                <button mat-flat-button color="primary">Next</button>
+              </div>
+            </div>
+          </mat-card-content>
+        </div>
+        <div class="child2" align="center">
+          <img class="imgg" src="../../assets/Images/register.png" />
+          <p style="font-size: 20px;">One account. All of Google</p>
+          <p style="font-size: 20px;">Working for you</p>
+        </div>
+      </div>
+    </mat-card>
+    <div class="footer">
+      <div class="main">
+        <div class="child1">
+          <mat-form-field>
+            <mat-label>English (United States)</mat-label>
+            <mat-select>
+              <mat-option value="English">English</mat-option>
+              <mat-option value="Telugu">Telugu</mat-option>
+              <mat-option value="Hindi">Hindi</mat-option>
+              <mat-option value="Kannada">Kannada</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="child2 text" style="direction: rtl; margin-top: 5px;">
+          <button mat-button>Terms</button>
+          <button mat-button>Privacy</button>
+          <button mat-button>Help</button>
+        </div>
+      </div>
+    <div>
+  </div>
+
