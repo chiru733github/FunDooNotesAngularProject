@@ -1,0 +1,35 @@
+<div class="icons">
+    <button mat-icon-button title="Remind me">
+        <img src="../../assets/Images/add_alert.svg"/>
+    </button>
+    <button mat-icon-button title="collaborator">
+        <img src="../../assets/Images/person_add.svg"/>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="colorMenu" title="Background options">
+        <img src="../../assets/Images/palette.svg"/>
+    </button>
+    <button mat-icon-button title="Add Image">
+        <img src="../../assets/Images/image.svg"/>
+    </button>
+    <button mat-icon-button (click)="onArchive()" title="Archive">
+        <img src="../../assets/Images/archive.svg"/>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="moreMenu" title="more">
+        <img src="../../assets/Images/more_vert.svg"/>
+    </button>
+    <mat-menu #moreMenu="matMenu">
+        <button mat-menu-item (click)="onTrash()">Delete Note</button>
+        <button mat-menu-item>Add Label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show checkboxes</button>
+        <button mat-menu-item>Version history</button>
+    </mat-menu>
+    <mat-menu #colorMenu="matMenu">
+        <div *ngFor= 'let color of ArrayofColor' class="colorbox" >
+            <button mat-menu-item class="colors" [style.background]="color.code" (click)="getColor(color)"></button>
+        </div>
+    </mat-menu>
+</div>
+
+

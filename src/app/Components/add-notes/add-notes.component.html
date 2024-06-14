@@ -1,0 +1,30 @@
+<div class="container">
+    <form [formGroup]="addNoteForm" (ngSubmit)="addNote()">
+    <mat-accordion class="placetoTitle">
+    <mat-expansion-panel style="width: 50%; margin-top: 25px; justify-content: center;" hideToggle>
+        <mat-expansion-panel-header>
+            <input matInput class="NoteTitle" placeholder="Title" formControlName="title">
+            <mat-icon>keep</mat-icon>
+        </mat-expansion-panel-header>
+        <input matInput class="NoteTitle" placeholder="Take a note" type="text" formControlName="description">
+        <div class="footer">
+            <div>
+                <app-icons></app-icons>
+            </div>
+            <div>
+                <button mat-icon-button title="undo">
+                    <mat-icon>undo</mat-icon>
+                </button>
+                <button mat-icon-button title="redo">
+                    <mat-icon>redo</mat-icon>
+                </button>
+            </div>
+            <div>
+                <button mat-button (click)="accordion.closeAll()">close</button>
+            </div>
+        </div>
+      </mat-expansion-panel>
+    
+    </mat-accordion>
+</form>
+</div>

@@ -17,25 +17,26 @@
           <mat-card-content>
             <h1 style="font-size: 36px;">Create your Google Account</h1>
             <h3 style="font-size: 16px;">to continue to Gmail</h3>
+            <form [formGroup]="RegisterForm" (ngSubmit)="OnRegister()">
             <div class="first">
               <div>
                 <mat-form-field appearance="outline">
                   <mat-label>First Name</mat-label>
-                  <input matInput placeholder="First Name">
+                  <input matInput placeholder="First Name" formControlName="firstName">
                 </mat-form-field>
               </div>
               <div>
                 <mat-form-field appearance="outline" style="padding-left: 20px;">
                   <mat-label>Last Name</mat-label>
-                  <input matInput placeholder="Last Name" >
+                  <input matInput placeholder="Last Name" formControlName="lastName">
                 </mat-form-field>
               </div>
             </div>
             <div>
               <mat-form-field appearance="outline" class="form">
                 <mat-label>Username</mat-label>
-                <input matInput placeholder="Username" >
-                <mat-icon matSuffix style="padding-right: 10px;">&#64;gmail.com</mat-icon>
+                <input matInput placeholder="Username" formControlName="email">
+                <span matSuffix style="padding-right: 10px;">&#64;gmail.com</span>
                 <mat-hint style="font-size: 14px;">You can use letters, numbers & periods</mat-hint>
               </mat-form-field>
             </div>
@@ -43,13 +44,13 @@
               <div>
                 <mat-form-field appearance="outline">
                   <mat-label>Password</mat-label>
-                  <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+                  <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password">
                 </mat-form-field>
               </div>
               <div>
                 <mat-form-field appearance="outline" style="padding-left: 20px;">
                   <mat-label>Confirm</mat-label>
-                  <input matInput placeholder="Confirm" [type]="hide ? 'password' : 'text'">
+                  <input matInput placeholder="Confirm" [type]="hide ? 'password' : 'text'" formControlName="confirmPassword">
                 </mat-form-field>
               </div>
             </div>
@@ -63,6 +64,7 @@
                 <button mat-flat-button color="primary">Next</button>
               </div>
             </div>
+            </form>
           </mat-card-content>
         </div>
         <div class="child2" align="center">
@@ -85,7 +87,7 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <div class="child2 text" style="direction: rtl; margin-top: 5px;">
+        <div class="child2" style="direction: rtl; margin-top: 5px;">
           <button mat-button>Terms</button>
           <button mat-button>Privacy</button>
           <button mat-button>Help</button>

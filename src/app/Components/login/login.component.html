@@ -14,16 +14,17 @@
         </div>
         <div class="child" style="padding-top:30px;">
           <mat-card-content>
-            <div>
+            <form [formGroup]="LoginForm" (ngSubmit)="Onlogin()">
+              <div>
               <mat-form-field appearance="outline" class="form">
                 <mat-label>Email or phone</mat-label>
-                <input matInput placeholder="Email or phone">
+                <input matInput placeholder="Email or phone" formControlName="email">
               </mat-form-field>
             </div>
             <div>
               <mat-form-field appearance="outline" class="form">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" type="password">
+                <input matInput placeholder="Password" type="password" formControlName="password">
                 <mat-hint>
                   <button mat-button color="primary">Forget Password?</button>
                 </mat-hint>
@@ -33,15 +34,16 @@
               <h5 class="text smallThing" >Not your computer? Use Guest mode to sign in privately.</h5>
               <a href="#" class="text" style="text-decoration: none; color: rgb(11,87,208);">Learn more about using Guest mode</a>
             </div>
+            <div class="main" style="direction: rtl;padding-right: 6%; margin-top: 25px;">
+              <div>
+                <button mat-flat-button onclick="" color="primary">Submit</button>
+              </div>
+              <div style="padding-right:25px;">
+                <button mat-button class="text" color="primary">Create account</button>
+              </div>
+            </div>
+            </form>
           </mat-card-content>
-        </div>
-      </div>
-      <div class="main" style="direction: rtl;padding-right: 6%; margin-top: 25px;">
-        <div>
-          <button mat-flat-button color="primary">Submit</button>
-        </div>
-        <div style="padding-right:25px;">
-          <button mat-button class="text" color="primary">Create account</button>
         </div>
       </div>
     </mat-card>

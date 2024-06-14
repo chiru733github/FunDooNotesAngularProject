@@ -1,0 +1,13 @@
+.card{
+    height: auto;
+    width: 30%; 
+    margin-bottom: 20px;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px;
+}

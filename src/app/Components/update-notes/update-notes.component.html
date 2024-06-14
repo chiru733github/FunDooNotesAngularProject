@@ -1,0 +1,25 @@
+<div>
+    <div class="title">
+        <input placeholder="Title" [(ngModel)]="title" class="Inputtitle">
+    </div>
+    <hr>
+    <div class="desc">
+        <input matInput type="text" class="descInput" [(ngModel)]="description" placeholder="description" cols="50" row="7"/>
+    </div>
+    <mat-card-actions>
+        <app-icons></app-icons>
+        <div>
+          <button mat-icon-button title="undo">
+              <mat-icon>undo</mat-icon>
+          </button>
+          <button mat-icon-button title="redo">
+              <mat-icon>redo</mat-icon>
+          </button>
+          </div>
+          <div>
+          <button mat-button (click)="closeDialogBox()">
+              close
+          </button>
+          </div>
+      </mat-card-actions>
+</div>

@@ -1,0 +1,82 @@
+<mat-toolbar class="nav">
+    <mat-toolbar-row class="rowitems">
+        <div class="d">
+            <button style="color: black;" (click)="sidenav.toggle();" mat-icon-button title="Main menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img src="../../assets/Images/keepicon.png" alt="NotFound" class="imgStyle">
+            <span>Keep</span>
+        </div>
+        <div class="search">
+            <mat-form-field class="form">
+                <button matTextPrefix mat-icon-button >
+                    <mat-icon>search</mat-icon>
+                </button>
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+                <button matTextSuffix mat-icon-button>
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-icon-button title="Refresh">
+                <mat-icon>refresh</mat-icon>
+            </button>
+            <button mat-icon-button title="List view">
+                <mat-icon>view_agenda</mat-icon>
+            </button>
+            <button mat-icon-button title="Settings">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <button mat-icon-button title="Google apps">
+                <mat-icon>apps</mat-icon>
+            </button>
+            <button mat-icon-button title="Google account">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="false" mode="side">
+        <mat-nav-list style="width: 250px;">
+            <a mat-list-item routerLink="/dashboard/notes">
+                <div class="sideitems">
+                    <mat-icon>lightbulb</mat-icon>
+                    <p>Notes</p>
+                </div>
+            </a>
+            <a mat-list-item>
+                <div class="sideitems">
+                    <mat-icon>notifications</mat-icon>
+                    <p>Reminders</p>
+                </div>
+            </a>
+            <a mat-list-item>
+                <div class="sideitems">
+                    <mat-icon>edit</mat-icon>
+                    <p>Edit labels</p>
+                </div>
+            </a>
+            <a mat-list-item routerLink="/dashboard/Archive">
+                <div class="sideitems">
+                    <mat-icon>archive</mat-icon>
+                    <p>Archive</p>
+                </div>
+            </a>
+            <a mat-list-item routerLink="/dashboard/Trash">
+                <div class="sideitems">
+                    <mat-icon>delete</mat-icon>
+                    <p>Trash</p>
+                </div>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 90vh">
+            <router-outlet>
+            </router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -11,9 +11,28 @@ import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+
 import { RegisterComponent } from './Components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { AddNotesComponent } from './Components/add-notes/add-notes.component';
+import { PresentedInDashboardComponent } from './Components/presented-in-dashboard/presented-in-dashboard.component';
+import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import { UpdateNotesComponent } from './Components/update-notes/update-notes.component';
+import { AuthguardService } from './Services/authguard/authguard.service';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
 
 
 @NgModule({
@@ -23,6 +42,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ResetPasswordComponent,
     RegisterComponent,
     ForgotPasswordComponent,
+    DashboardComponent,
+    AddNotesComponent,
+    PresentedInDashboardComponent,
+    DisplayNotesComponent,
+    IconsComponent,
+    UpdateNotesComponent,
+    ArchiveComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,10 +59,18 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     MatSelectModule,
     BrowserAnimationsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    FormsModule,ReactiveFormsModule,HttpClientModule,MatMenuModule,
+    MatDialogModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    AuthguardService
   ],
   bootstrap: [AppComponent]
 })

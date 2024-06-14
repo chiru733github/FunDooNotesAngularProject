@@ -1,0 +1,25 @@
+.colorbox{
+    display: inline;
+    flex-direction:row;
+    width:900px;
+    gap:30px;
+}
+.colors{
+    display: inline;
+    width: 10%;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.mat-mdc-menu-content, .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text{
+display: flex!important;
+gap:10px;
+}
