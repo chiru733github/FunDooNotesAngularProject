@@ -33,7 +33,8 @@ import { UpdateNotesComponent } from './Components/update-notes/update-notes.com
 import { AuthguardService } from './Services/authguard/authguard.service';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
-
+import { TodoListComponent } from './Components/todo-list/todo-list.component';
+import {FilterPipe} from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,8 @@ import { TrashComponent } from './Components/trash/trash.component';
     UpdateNotesComponent,
     ArchiveComponent,
     TrashComponent,
+    TodoListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

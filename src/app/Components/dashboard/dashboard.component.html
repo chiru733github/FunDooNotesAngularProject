@@ -7,18 +7,16 @@
             <img src="../../assets/Images/keepicon.png" alt="NotFound" class="imgStyle">
             <span>Keep</span>
         </div>
-        <div class="search">
-            <mat-form-field class="form">
-                <button matTextPrefix mat-icon-button >
-                    <mat-icon>search</mat-icon>
-                </button>
-                <mat-label>Search</mat-label>
-                <input matInput placeholder="Search">
-                <button matTextSuffix mat-icon-button>
-                    <mat-icon>close</mat-icon>
-                </button>
-            </mat-form-field>
-        </div>
+        <div class="search-container">
+            <button class="header-btn-menu" mat-icon-button aria-label="menu">
+              <img src="../../assets/Images/search.svg" alt="">
+            </button>
+            <input
+              type="text"
+              placeholder="Search"
+              (keyup)="searchingNotes($event)"
+            />
+          </div>
         <div>
             <button mat-icon-button title="Refresh">
                 <mat-icon>refresh</mat-icon>
@@ -43,31 +41,31 @@
         <mat-nav-list style="width: 250px;">
             <a mat-list-item routerLink="/dashboard/notes">
                 <div class="sideitems">
-                    <mat-icon>lightbulb</mat-icon>
+                    <img src="../../assets/Images/lightbulb.svg" alt="">
                     <p>Notes</p>
                 </div>
             </a>
             <a mat-list-item>
                 <div class="sideitems">
-                    <mat-icon>notifications</mat-icon>
+                    <img src="../../assets/Images/notifications.svg" alt="">
                     <p>Reminders</p>
                 </div>
             </a>
             <a mat-list-item>
                 <div class="sideitems">
-                    <mat-icon>edit</mat-icon>
+                    <img src="../../assets/Images/edit.svg" alt="">
                     <p>Edit labels</p>
                 </div>
             </a>
             <a mat-list-item routerLink="/dashboard/Archive">
                 <div class="sideitems">
-                    <mat-icon>archive</mat-icon>
+                    <img src="../../assets/Images/archive.svg" alt="">
                     <p>Archive</p>
                 </div>
             </a>
             <a mat-list-item routerLink="/dashboard/Trash">
                 <div class="sideitems">
-                    <mat-icon>delete</mat-icon>
+                    <img src="../../assets/Images/delete.svg" alt="">
                     <p>Trash</p>
                 </div>
             </a>

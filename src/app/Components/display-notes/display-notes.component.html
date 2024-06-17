@@ -1,5 +1,5 @@
 <div class="row">
-  <div *ngFor="let notes of ListofNotes" class="card">
+  <div *ngFor="let notes of ListofNotes | filter:filterNote" class="card">
     <mat-card  [style.background]="notes.color" style="border-radius: 15px;">
         <mat-card-header (click)="UpdatingNote(notes)">
           <mat-card-title>{{notes.title}}</mat-card-title>

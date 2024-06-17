@@ -1,0 +1,43 @@
+<div class="container">
+    <mat-card class="card">
+      <mat-card-header style="justify-content: center;">
+        <mat-card-title>TodoList</mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <div *ngFor="let todo of todos; let i = index" class="item">
+          <div>
+            <mat-card-title-group *ngIf="!todo.isEditing">{{ todo.task }}</mat-card-title-group>
+            <mat-form-field appearance="outline">
+              <input matInput placeholder="" *ngIf="todo.isEditing" [(ngModel)]="todo.task">
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-fab extended *ngIf="!todo.isEditing" (click)="editTodo(todo)">
+              <img src="../../assets/Images/edit.svg" alt="">
+              Edit
+            </button>
+            <button mat-fab extended *ngIf="!todo.isEditing" (click)="deleteTodo(i)">
+              <img src="../../assets/Images/delete.svg" alt="">
+              Delete
+            </button>
+            <button mat-fab extended *ngIf="todo.isEditing" (click)="saveTodo(todo)">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
+              save
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+      <hr>
+      <mat-card-footer class="item">
+        <mat-form-field appearance="outline">
+          <mat-label>Add item</mat-label>
+          <input matInput placeholder="" [(ngModel)]="newTodo">
+        </mat-form-field>
+        <button mat-fab extended (click)="addTodo()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#666666"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>
+          submit
+        </button>
+      </mat-card-footer>
+    </mat-card>
+</div>    

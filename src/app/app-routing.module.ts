@@ -9,6 +9,7 @@ import { PresentedInDashboardComponent } from './Components/presented-in-dashboa
 import { authGuard } from './shared/auth.guard';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import { TodoListComponent } from './Components/todo-list/todo-list.component';
 
 const routes: Routes = [
   {path: 'LoginPage', component: LoginComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
       {path:'Trash',component:TrashComponent}
     ]
   },
+  {path:'list',component:TodoListComponent}
 ];
 
 @NgModule({
